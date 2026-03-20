@@ -1,1 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>Security Systems in Oman | CCTV & Surveillance Solutions</title>
+
+<meta name="description" content="Al Wejha Group provides advanced security systems in Oman including CCTV installation, access control, surveillance systems, and security solutions for residential and commercial properties.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#050505;
+color:#fff;
+}
+
+/* NAV */
+header{
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+}
+nav a{
+color:#bbb;
+margin:0 10px;
+text-decoration:none;
+}
+nav a:hover{color:#ef4444}
+
+/* HERO */
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+url('images/security.jpg') center/cover;
+}
+.hero-content{
+margin-left:10%;
+max-width:650px;
+animation:fadeUp 1s ease;
+}
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+.hero p{color:#ccc}
+
+/* SECTION */
+section{padding:80px 10%}
+h2{
+color:#ef4444;
+margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.04);
+padding:25px;
+border-radius:12px;
+transition:.4s;
+opacity:0;
+transform:translateY(40px);
+border:1px solid rgba(239,68,68,0.3);
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(239,68,68,0.2);
+}
+
+/* SHOW */
+.show{
+opacity:1;
+transform:translateY(0);
+transition:1s;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* CTA */
+.cta{
+background:#ef4444;
+color:#fff;
+padding:40px;
+text-align:center;
+border-radius:15px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>Al Wejha Group</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="construction-oman.html">Construction</a>
+<a href="mep-contractor-oman.html">MEP</a>
+<a href="villa-construction-oman.html">Villa</a>
+<a href="solar-energy-oman.html">Solar</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>Security Systems & CCTV Installation in Oman</h1>
+<p>
+We provide advanced security systems in Oman including CCTV installation, surveillance systems, access control, and integrated security solutions.
+</p>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<h2>Security Systems Solutions in Oman</h2>
+
+<p>
+Al Wejha Group is a trusted provider of security systems in Oman offering complete surveillance and protection solutions for residential, commercial, and industrial properties. Our systems are designed to ensure safety, monitoring, and control at all times.
+</p>
+
+<p>
+We specialize in CCTV installation, access control systems, video surveillance, and smart security solutions across Muscat and all regions of Oman.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Our Security Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>CCTV Installation</h3>
+<p>High-definition CCTV systems for complete monitoring and surveillance.</p>
+</div>
+
+<div class="card">
+<h3>Access Control Systems</h3>
+<p>Secure entry systems including biometric and card access solutions.</p>
+</div>
+
+<div class="card">
+<h3>Video Surveillance</h3>
+<p>Advanced monitoring systems with remote access and recording.</p>
+</div>
+
+<div class="card">
+<h3>Integrated Security Systems</h3>
+<p>Complete security solutions combining multiple technologies.</p>
+</div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+<section>
+<h2>Why Choose Our Security Systems</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Advanced Technology</h3>
+<p>Latest security systems with smart integration.</p>
+</div>
+
+<div class="card">
+<h3>Reliable Protection</h3>
+<p>24/7 monitoring and high-performance systems.</p>
+</div>
+
+<div class="card">
+<h3>Professional Installation</h3>
+<p>Expert installation and system configuration.</p>
+</div>
+
+</div>
+
+<div class="cta">
+<h3>Secure Your Property Today</h3>
+<p>Contact us for professional security system installation in Oman.</p>
+</div>
+
+</section>
+
+<script>
+const cards=document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+cards.forEach(card=>{
+if(card.getBoundingClientRect().top < window.innerHeight-100){
+card.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
