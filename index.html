@@ -50,6 +50,29 @@ nav a:hover{color:#00e5ff}
 
 .logo{height:45px}
 
+/* DROPDOWN */
+.menu{display:flex;align-items:center}
+.dropdown{position:relative}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#111827;
+padding:10px;
+border-radius:8px;
+top:30px;
+min-width:200px;
+z-index:999;
+}
+.dropdown-content a{
+display:block;
+padding:10px;
+color:#ccc;
+}
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
 /* HERO */
 .hero{
 height:100vh;
@@ -106,6 +129,9 @@ background:#111827;
 padding:25px;
 border-radius:12px;
 transition:.4s;
+text-decoration:none;
+color:#fff;
+display:block;
 }
 .card:hover{
 transform:translateY(-10px);
@@ -132,6 +158,7 @@ text-align:center;
 padding:50px;
 border-radius:20px;
 margin-top:40px;
+cursor:pointer;
 }
 
 /* FOOTER */
@@ -147,6 +174,7 @@ color:#aaa;
 .hero h1{font-size:40px}
 .split{grid-template-columns:1fr}
 }
+
 @keyframes fadeUp{
 from{opacity:0;transform:translateY(40px)}
 to{opacity:1;transform:translateY(0)}
@@ -160,13 +188,23 @@ to{opacity:1;transform:translateY(0)}
 <nav>
 <img src="images/logo.png" class="logo">
 
-<div>
+<div class="menu">
 <a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services ▾</a>
+<div class="dropdown-content">
 <a href="construction-oman.html">Construction</a>
 <a href="mep-contractor-oman.html">MEP</a>
 <a href="villa-construction-oman.html">Villa</a>
 <a href="security-systems-oman.html">Security</a>
 <a href="solar-energy-oman.html">Solar</a>
+<a href="pipeline-oman.html">Pipeline</a>
+<a href="road-construction-oman.html">Road</a>
+</div>
+</div>
+
+<a href="#">Clients</a>
 <a href="contact.html">Contact</a>
 </div>
 </nav>
@@ -191,11 +229,11 @@ Al Wejha Group is a trusted construction company in Oman delivering civil constr
 <h2>Complete Construction & Infrastructure Solutions</h2>
 
 <p>
-We are one of the best construction companies in Oman providing end-to-end solutions including civil works, building construction, MEP contracting, solar energy installation, pipeline construction, sewage systems, and road infrastructure development.
+We provide end-to-end construction solutions including civil works, MEP contracting, solar energy systems, pipeline works, sewage systems, and road construction across Oman.
 </p>
 
 <p>
-Our expertise covers residential, commercial, and industrial projects with a strong focus on quality, safety, and timely delivery across Muscat and the entire Oman region.
+Our expertise spans residential, commercial, and industrial sectors with a strong focus on quality, safety, and timely delivery.
 </p>
 </div>
 
@@ -208,47 +246,49 @@ Our expertise covers residential, commercial, and industrial projects with a str
 
 <div class="grid">
 
-<div class="card">
+<a href="construction-oman.html" class="card">
 <h3>Construction Works</h3>
-<p>Complete civil construction, building contractors, and infrastructure development in Oman.</p>
-</div>
+<p>Complete civil construction and infrastructure projects.</p>
+</a>
 
-<div class="card">
+<a href="mep-contractor-oman.html" class="card">
 <h3>MEP Contracting</h3>
-<p>HVAC, electrical, plumbing, and electromechanical services across Oman.</p>
-</div>
+<p>HVAC, electrical and plumbing services.</p>
+</a>
 
-<div class="card">
+<a href="villa-construction-oman.html" class="card">
 <h3>Villa Construction</h3>
-<p>Luxury villa construction with modern design and premium finishing.</p>
-</div>
+<p>Luxury villas with modern design.</p>
+</a>
 
-<div class="card">
+<a href="solar-energy-oman.html" class="card">
 <h3>Solar Energy Systems</h3>
-<p>Solar panel installation and renewable energy solutions in Oman.</p>
-</div>
+<p>Solar panel installation and renewable solutions.</p>
+</a>
 
-<div class="card">
+<a href="pipeline-oman.html" class="card">
 <h3>Pipeline & Sewerage</h3>
-<p>Pipeline construction, sewage systems, and drainage infrastructure.</p>
-</div>
+<p>Drainage, sewage and pipeline works.</p>
+</a>
 
-<div class="card">
+<a href="road-construction-oman.html" class="card">
 <h3>Road Construction</h3>
-<p>Road works, asphalt paving, and infrastructure development projects.</p>
-</div>
+<p>Asphalt and infrastructure development.</p>
+</a>
 
-<div class="card">
+<a href="security-systems-oman.html" class="card">
 <h3>Security Systems</h3>
-<p>CCTV installation, surveillance systems, and access control solutions.</p>
-</div>
+<p>CCTV and surveillance solutions.</p>
+</a>
 
 </div>
 
+<a href="contact.html" style="text-decoration:none;">
 <div class="cta">
 <h3>Looking for a Reliable Construction Company in Oman?</h3>
 <p>Contact Al Wejha Group for complete construction and engineering solutions.</p>
 </div>
+</a>
 
 </section>
 
