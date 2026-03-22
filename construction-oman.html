@@ -8,134 +8,194 @@
 
 <meta name="description" content="Al Wejha Group is a leading construction company in Oman offering civil works, building construction, infrastructure, and turnkey projects across Muscat and Oman.">
 
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="images/logo.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
 font-family:'Poppins',sans-serif;
-background:#060d1f;
-color:#fff;
+background:#f5f7fb;
+color:#1f2937;
+line-height:1.6;
 }
 
-/* NAV */
+/* NAVBAR */
 header{
 position:fixed;
 width:100%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 10%;
+padding:15px 8%;
 }
 nav a{
-color:#ccc;
-margin:0 10px;
+color:#333;
+margin:0 12px;
 text-decoration:none;
+font-size:14px;
+font-weight:500;
 }
-nav a:hover{color:#facc15}
+nav a:hover{color:#f59e0b}
 
-/* LOGO */
-.brand-logo{
-height:44px;
-width:auto;
+.logo{height:45px}
+
+/* DROPDOWN */
+.menu{display:flex;align-items:center}
+.dropdown{position:relative}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#fff;
+padding:10px;
+border-radius:8px;
+top:30px;
+min-width:220px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+.dropdown-content a{
+display:block;
+padding:10px;
+color:#333;
+}
+.dropdown:hover .dropdown-content{
 display:block;
 }
 
 /* HERO */
 .hero{
-height:90vh;
+height:85vh;
 display:flex;
 align-items:center;
 background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
-url('images/construction.jpg') center/cover;
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
+url('images/construction-about.webp') center/cover;
 }
 .hero-content{
-margin-left:10%;
-max-width:650px;
-animation:fadeUp 1s ease;
+max-width:700px;
+margin-left:8%;
+color:#fff;
 }
 .hero h1{
 font-size:48px;
 margin-bottom:20px;
 }
-.hero p{color:#ccc}
+.hero p{color:#ddd}
 
-/* SECTION */
-section{padding:80px 10%}
+/* SECTIONS */
+section{padding:80px 8%}
 h2{
-color:#facc15;
+font-size:32px;
 margin-bottom:20px;
+color:#f59e0b;
 }
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+gap:30px;
 }
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.05);
+background:#fff;
 padding:25px;
 border-radius:12px;
-transition:.4s;
-opacity:0;
-transform:translateY(40px);
-border-left:4px solid #facc15;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:.3s;
 }
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
-/* SHOW */
-.show{
-opacity:1;
-transform:translateY(0);
-transition:1s;
+/* SPLIT */
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:translateY(0)}
+.split img{
+width:100%;
+border-radius:12px;
 }
 
 /* CTA */
 .cta{
-background:#facc15;
+background:#f59e0b;
 color:#000;
-padding:40px;
 text-align:center;
+padding:50px;
 border-radius:15px;
 margin-top:40px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#ccc;
+padding:50px 8%;
+margin-top:40px;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+footer h4{color:#fff;margin-bottom:15px}
+footer a{
+display:block;
+color:#aaa;
+text-decoration:none;
+margin-bottom:8px;
+font-size:14px;
+}
+footer a:hover{color:#f59e0b}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:34px}
+.split{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
 <nav>
+<img src="images/logo.png" class="logo">
 
-<a href="index.html" aria-label="Al Wejha Group Home">
-  <img src="images/logo.png" alt="Al Wejha Group Logo" class="brand-logo">
-</a>
-
-<div>
+<div class="menu">
 <a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services ▾</a>
+<div class="dropdown-content">
+<a href="construction-oman.html">Construction</a>
 <a href="mep-contractor-oman.html">MEP</a>
 <a href="villa-construction-oman.html">Villa</a>
 <a href="security-systems-oman.html">Security</a>
 <a href="solar-energy-oman.html">Solar</a>
+<a href="pipeline-oman.html">Pipeline</a>
+<a href="road-construction-oman.html">Road</a>
+</div>
+</div>
+
+<a href="#">Clients</a>
+<a href="contact.html">Contact</a>
 </div>
 </nav>
 </header>
@@ -151,16 +211,20 @@ We deliver high-quality civil construction, commercial buildings, and infrastruc
 </div>
 
 <!-- ABOUT -->
-<section>
+<section class="split">
+<div>
 <h2>Professional Construction Services in Oman</h2>
 
 <p>
-Al Wejha Group is a trusted construction company in Oman specializing in civil works, building construction, infrastructure development, and turnkey construction projects. We serve residential, commercial, and industrial sectors across Muscat and all regions of Oman.
+Al Wejha Group is a trusted construction company in Oman specializing in civil works, building construction, infrastructure development, and turnkey construction projects.
 </p>
 
 <p>
-Our team ensures high-quality construction using modern techniques, skilled manpower, and advanced equipment to deliver projects on time and within budget.
+We deliver projects across Muscat and Oman with strong quality control, safety standards, and timely execution.
 </p>
+</div>
+
+<img src="images/construction-card.webp" alt="Construction Services Oman">
 </section>
 
 <!-- SERVICES -->
@@ -171,22 +235,22 @@ Our team ensures high-quality construction using modern techniques, skilled manp
 
 <div class="card">
 <h3>Residential Construction</h3>
-<p>Villa construction, housing projects, and modern residential buildings.</p>
+<p>Modern villas and housing projects with premium finishes.</p>
 </div>
 
 <div class="card">
 <h3>Commercial Buildings</h3>
-<p>Offices, malls, and business complexes with durable structures.</p>
+<p>Office buildings, malls, and commercial developments.</p>
 </div>
 
 <div class="card">
 <h3>Industrial Construction</h3>
-<p>Factories, warehouses, and industrial facilities.</p>
+<p>Factories, warehouses, and industrial infrastructure.</p>
 </div>
 
 <div class="card">
 <h3>Infrastructure Works</h3>
-<p>Road construction, drainage systems, and site development.</p>
+<p>Roads, drainage, pipelines, and utilities development.</p>
 </div>
 
 </div>
@@ -194,45 +258,68 @@ Our team ensures high-quality construction using modern techniques, skilled manp
 
 <!-- WHY US -->
 <section>
-<h2>Why Choose Us</h2>
+<h2>Why Choose Al Wejha Group</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Experienced Engineers</h3>
-<p>Highly skilled professionals with industry expertise.</p>
+<h3>Experienced Team</h3>
+<p>Skilled engineers and project managers.</p>
 </div>
 
 <div class="card">
-<h3>Quality Materials</h3>
-<p>We use high-grade materials for long-lasting structures.</p>
+<h3>Quality Assurance</h3>
+<p>Strict quality control and durable construction.</p>
 </div>
 
 <div class="card">
 <h3>On-Time Delivery</h3>
-<p>Strong project management ensures timely completion.</p>
+<p>Efficient project execution and delivery.</p>
 </div>
 
 </div>
 
+<a href="contact.html" style="text-decoration:none;">
 <div class="cta">
 <h3>Looking for a Reliable Construction Company in Oman?</h3>
 <p>Contact us today to start your project.</p>
 </div>
+</a>
 
 </section>
 
-<script>
-const cards=document.querySelectorAll('.card');
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
 
-window.addEventListener('scroll',()=>{
-cards.forEach(card=>{
-if(card.getBoundingClientRect().top < window.innerHeight-100){
-card.classList.add('show');
-}
-});
-});
-</script>
+<div>
+<h4>Al Wejha Group</h4>
+<p>Leading construction company in Oman delivering civil, MEP, solar and infrastructure solutions.</p>
+</div>
+
+<div>
+<h4>Our Services</h4>
+<a href="construction-oman.html">Construction</a>
+<a href="mep-contractor-oman.html">MEP</a>
+<a href="villa-construction-oman.html">Villa</a>
+<a href="solar-energy-oman.html">Solar</a>
+</div>
+
+<div>
+<h4>Quick Links</h4>
+<a href="index.html">Home</a>
+<a href="#">Clients</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>Muscat, Oman</p>
+<p>Email: info@alwejhagroup.com</p>
+</div>
+
+</div>
+</footer>
 
 </body>
 </html>
