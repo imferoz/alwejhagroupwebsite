@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Our Clients | Al Wejha Group Oman</title>
+
+<meta name="description" content="Al Wejha Group serves leading clients in Oman including OQBI, PDO, Galfar, Nama, and more across construction, MEP, and infrastructure projects.">
+
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8fafc;
+color:#1e293b;
+}
+
+/* NAV */
+header{
+position:fixed;
+width:100%;
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+nav a{
+color:#334155;
+margin:0 12px;
+text-decoration:none;
+font-size:14px;
+}
+nav a:hover{color:#2563eb}
+
+.logo{height:45px}
+
+/* DROPDOWN */
+.menu{display:flex;align-items:center}
+.dropdown{position:relative}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:#fff;
+padding:10px;
+border-radius:8px;
+top:30px;
+min-width:220px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.dropdown-content a{
+display:block;
+padding:10px;
+color:#334155;
+}
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* HERO */
+.hero{
+height:60vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
+url('images/clients-hero.webp') center/cover;
+color:#fff;
+}
+.hero-content{
+margin-left:8%;
+max-width:700px;
+}
+.hero h1{font-size:48px}
+
+/* SECTION */
+section{padding:80px 8%}
+h2{
+color:#2563eb;
+margin-bottom:20px;
+}
+
+/* CLIENT GRID */
+.clients{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:30px;
+text-align:center;
+}
+.clients img{
+width:100%;
+background:#fff;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:.3s;
+}
+.clients img:hover{
+transform:translateY(-5px);
+}
+
+/* PROJECT */
+.project{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+.project img{
+width:100%;
+border-radius:15px;
+}
+
+/* CTA */
+.cta{
+background:#2563eb;
+color:#fff;
+padding:40px;
+text-align:center;
+border-radius:15px;
+margin-top:40px;
+}
+
+/* FOOTER */
+footer{
+background:#0f172a;
+color:#cbd5f5;
+padding:50px 8%;
+margin-top:40px;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.project{grid-template-columns:1fr}
+.hero h1{font-size:34px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<img src="images/logo.png" class="logo">
+
+<div class="menu">
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services ▾</a>
+<div class="dropdown-content">
+<a href="construction-oman.html">Construction</a>
+<a href="mep-contractor-oman.html">MEP</a>
+<a href="villa-construction-oman.html">Villa</a>
+<a href="solar-energy-oman.html">Solar</a>
+<a href="pipeline-oman.html">Pipeline</a>
+<a href="road-construction-oman.html">Road</a>
+<a href="security-systems-oman.html">Security</a>
+</div>
+</div>
+
+<a href="clients.html">Clients</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>Our Esteemed Clients</h1>
+<p>We proudly serve leading organizations across Oman.</p>
+</div>
+</div>
+
+<!-- CLIENTS -->
+<section>
+<h2>Trusted By Industry Leaders</h2>
+
+<div class="clients">
+
+<img src="images/oqbi-logo.webp" alt="OQBI">
+<img src="images/sohar-power-logo.webp" alt="Sohar Power">
+<img src="images/mazoon-electricity-logo.webp" alt="Mazoon Electricity">
+
+<img src="images/pdo-logo.webp" alt="PDO">
+<img src="images/galfar-logo.webp" alt="Galfar">
+<img src="images/majan-electricity-logo.webp" alt="Majan Electricity">
+
+<img src="images/diam-haya-logo.webp" alt="Diam Haya">
+<img src="images/nama-logo.webp" alt="Nama">
+<img src="images/khazaen-logo.webp" alt="Khazaen Oman">
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<h2>Ongoing Projects</h2>
+
+<div class="project">
+
+<div>
+<h3>Ministry of Education Project</h3>
+<p>
+Execution of infrastructure and construction works supporting educational development projects across Oman.
+</p>
+
+<h3 style="margin-top:20px;">Oman Water & Wastewater Services Company (Sewerage Pipeline Project)</h3>
+<p>
+Sewerage pipeline laying project in Muscat involving excavation, pipeline installation, and infrastructure development.
+</p>
+</div>
+
+<img src="images/project-pipeline.webp" alt="Pipeline Project Oman">
+
+</div>
+
+<div class="cta">
+<h3>Partner With Al Wejha Group</h3>
+<p>Join our growing list of satisfied clients across Oman.</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h3>Al Wejha Group</h3>
+<p>Leading construction and infrastructure company in Oman.</p>
+</div>
+
+<div>
+<h4>Quick Links</h4>
+<p><a href="index.html">Home</a></p>
+<p><a href="clients.html">Clients</a></p>
+<p><a href="contact.html">Contact</a></p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>Sohar, Oman</p>
+<p>business@alwejhagroup.com</p>
+</div>
+
+</div>
+
+<p style="text-align:center;margin-top:30px;">© 2026 Al Wejha Group</p>
+
+</footer>
+
+</body>
+</html>
