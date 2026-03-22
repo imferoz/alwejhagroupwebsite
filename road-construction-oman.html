@@ -4,11 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Road Construction Company in Oman | Asphalt & Infrastructure Contractors</title>
+<title>Road Construction in Oman | Asphalt & Infrastructure Contractors</title>
 
-<meta name="description" content="Al Wejha Group is a leading road construction company in Oman providing asphalt works, road infrastructure, grading, paving, and highway construction services across Muscat and Oman.">
-
-<meta name="keywords" content="road construction Oman, asphalt contractor Oman, road contractor Muscat, highway construction Oman, paving contractor Oman">
+<meta name="description" content="Al Wejha Group provides road construction in Oman including asphalt works, highway construction, paving, and infrastructure development across Muscat and Oman.">
 
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="images/logo.png">
@@ -20,17 +18,17 @@
 
 body{
 font-family:'Poppins',sans-serif;
-background:#0a0f1c;
-color:#fff;
+background:#f5f7fb;
+color:#1e293b;
 line-height:1.6;
 }
 
-/* NAV */
+/* NAVBAR */
 header{
 position:fixed;
 width:100%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
 nav{
@@ -40,7 +38,7 @@ align-items:center;
 padding:15px 8%;
 }
 nav a{
-color:#ccc;
+color:#334155;
 margin:0 12px;
 text-decoration:none;
 font-size:14px;
@@ -49,50 +47,51 @@ nav a:hover{color:#f97316}
 
 .logo{height:45px}
 
+/* DROPDOWN */
+.menu{display:flex;align-items:center}
+.dropdown{position:relative}
+.dropdown-content{
+display:none;
+position:absolute;
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+padding:10px;
+border-radius:8px;
+top:30px;
+min-width:220px;
+}
+.dropdown-content a{
+display:block;
+padding:10px;
+}
+.dropdown:hover .dropdown-content{display:block}
+
 /* HERO */
 .hero{
 height:90vh;
 display:flex;
 align-items:center;
 background:
-linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
-url('images/road.jpg') center/cover;
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.75)),
+url('images/road-about.webp') center/cover;
 }
 .hero-content{
+max-width:700px;
 margin-left:8%;
-max-width:650px;
+color:#fff;
 }
 .hero h1{
-font-size:50px;
+font-size:52px;
 margin-bottom:20px;
 }
-.hero p{color:#ccc}
+.hero p{color:#e2e8f0}
 
 /* SECTION */
-section{padding:90px 8%}
+section{padding:80px 8%}
 h2{
-color:#f97316;
-margin-bottom:20px;
 font-size:32px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-/* CARD */
-.card{
-background:#111827;
-padding:25px;
-border-radius:12px;
-transition:.4s;
-}
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(249,115,22,0.25);
+margin-bottom:20px;
+color:#f97316;
 }
 
 /* SPLIT */
@@ -107,14 +106,51 @@ width:100%;
 border-radius:15px;
 }
 
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+}
+
 /* CTA */
 .cta{
 background:linear-gradient(45deg,#f97316,#fb923c);
-color:#000;
+color:#fff;
 padding:50px;
 text-align:center;
 border-radius:20px;
 margin-top:40px;
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+color:#cbd5f5;
+padding:60px 8%;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+footer a{
+display:block;
+color:#cbd5f5;
+text-decoration:none;
+margin-bottom:8px;
 }
 
 /* MOBILE */
@@ -131,12 +167,23 @@ margin-top:40px;
 <nav>
 <img src="images/logo.png" class="logo">
 
-<div>
+<div class="menu">
 <a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#">Services ▾</a>
+<div class="dropdown-content">
 <a href="construction-oman.html">Construction</a>
 <a href="mep-contractor-oman.html">MEP</a>
 <a href="villa-construction-oman.html">Villa</a>
+<a href="security-systems-oman.html">Security</a>
+<a href="solar-energy-oman.html">Solar</a>
 <a href="pipeline-oman.html">Pipeline</a>
+<a href="road-construction-oman.html">Road</a>
+</div>
+</div>
+
+<a href="#">Clients</a>
 <a href="contact.html">Contact</a>
 </div>
 </nav>
@@ -146,9 +193,8 @@ margin-top:40px;
 <div class="hero">
 <div class="hero-content">
 <h1>Road Construction Company in Oman</h1>
-
 <p>
-Al Wejha Group is a leading road construction contractor in Oman providing asphalt paving, grading, highway construction, and infrastructure development services across Muscat and all regions of Oman.
+Professional asphalt paving, highway construction, and infrastructure development solutions across Oman.
 </p>
 </div>
 </div>
@@ -156,18 +202,18 @@ Al Wejha Group is a leading road construction contractor in Oman providing aspha
 <!-- ABOUT -->
 <section class="split">
 <div>
-<h2>Road & Infrastructure Development in Oman</h2>
+<h2>Road Infrastructure Experts</h2>
 
 <p>
-We specialize in road construction in Oman including asphalt works, road base preparation, grading, and paving for residential, commercial, and government infrastructure projects. Our expertise ensures durable, high-performance roads built to international standards.
+Al Wejha Group delivers high-quality road construction services in Oman including asphalt paving, grading, and large-scale infrastructure development projects.
 </p>
 
 <p>
-As a trusted road contractor in Oman, we deliver complete infrastructure solutions including highways, internal roads, parking areas, and industrial road networks with a focus on quality, safety, and timely delivery.
+We ensure durability, safety, and performance using modern construction techniques and advanced equipment.
 </p>
 </div>
 
-<img src="images/road.jpg" alt="Road Construction Oman">
+<img src="images/road-card.webp" alt="Road Construction Oman">
 </section>
 
 <!-- SERVICES -->
@@ -178,32 +224,22 @@ As a trusted road contractor in Oman, we deliver complete infrastructure solutio
 
 <div class="card">
 <h3>Asphalt Paving</h3>
-<p>High-quality asphalt road construction and resurfacing services.</p>
-</div>
-
-<div class="card">
-<h3>Road Base Preparation</h3>
-<p>Subgrade preparation, compaction, and base course installation.</p>
+<p>Durable roads, parking areas, and driveways.</p>
 </div>
 
 <div class="card">
 <h3>Highway Construction</h3>
-<p>Construction of highways and major infrastructure road projects.</p>
-</div>
-
-<div class="card">
-<h3>Internal Roads</h3>
-<p>Roads for residential communities, industrial areas, and commercial zones.</p>
-</div>
-
-<div class="card">
-<h3>Parking & Pavements</h3>
-<p>Car parking areas, pavements, and interlock works.</p>
+<p>Large-scale infrastructure and highway development.</p>
 </div>
 
 <div class="card">
 <h3>Road Maintenance</h3>
-<p>Repair, resurfacing, and maintenance of existing roads.</p>
+<p>Repair, resurfacing, and upgrades.</p>
+</div>
+
+<div class="card">
+<h3>Earthworks & Grading</h3>
+<p>Site preparation and leveling works.</p>
 </div>
 
 </div>
@@ -211,33 +247,53 @@ As a trusted road contractor in Oman, we deliver complete infrastructure solutio
 
 <!-- WHY US -->
 <section>
-<h2>Why Choose Our Road Construction Services</h2>
+<h2>Why Choose Us</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Modern Machinery</h3>
-<p>Advanced equipment for efficient road construction.</p>
+<h3>Modern Equipment</h3>
+<p>Advanced machinery ensures precision.</p>
 </div>
 
 <div class="card">
-<h3>Quality Materials</h3>
-<p>Use of high-grade asphalt and construction materials.</p>
+<h3>High Durability</h3>
+<p>Long-lasting road construction quality.</p>
 </div>
 
 <div class="card">
-<h3>Timely Completion</h3>
-<p>Projects delivered on schedule with strict quality control.</p>
+<h3>Timely Delivery</h3>
+<p>Efficient execution and planning.</p>
 </div>
 
 </div>
 
 <div class="cta">
-<h3>Looking for a Road Construction Contractor in Oman?</h3>
-<p>Contact Al Wejha Group for reliable road and infrastructure solutions.</p>
+<h3>Need a Road Contractor in Oman?</h3>
+<p>Contact Al Wejha Group today.</p>
 </div>
 
 </section>
+
+<footer>
+<div class="footer-grid">
+<div>
+<h4>Al Wejha Group</h4>
+<p>Construction & infrastructure experts in Oman.</p>
+</div>
+<div>
+<h4>Services</h4>
+<a href="construction-oman.html">Construction</a>
+<a href="mep-contractor-oman.html">MEP</a>
+<a href="villa-construction-oman.html">Villa</a>
+</div>
+<div>
+<h4>Quick Links</h4>
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
+</footer>
 
 </body>
 </html>
