@@ -81,7 +81,7 @@ display:flex;
 align-items:center;
 background:
 linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
-url('images/hero.jpg') center/cover;
+url('images/hero-home.webp') center/cover;
 color:#fff;
 }
 .hero-content{
@@ -147,6 +147,38 @@ width:100%;
 border-radius:12px;
 }
 
+/* CLIENT SLIDER */
+.logo-slider{
+overflow:hidden;
+background:#fff;
+padding:30px 0;
+margin-top:40px;
+}
+
+.logo-track{
+display:flex;
+width:200%;
+animation:scroll 25s linear infinite;
+}
+
+.logo-track img{
+width:160px;
+margin:0 40px;
+filter:grayscale(100%);
+opacity:0.7;
+transition:.3s;
+}
+
+.logo-track img:hover{
+filter:grayscale(0);
+opacity:1;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
 /* CTA */
 .cta{
 background:#0077ff;
@@ -163,6 +195,24 @@ text-align:center;
 padding:40px;
 background:#111;
 color:#aaa;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:#fff;
+font-size:26px;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:999;
+}
+.whatsapp:hover{
+transform:scale(1.1);
 }
 
 /* MOBILE */
@@ -195,7 +245,7 @@ color:#aaa;
 </div>
 </div>
 
-<a href="#">Clients</a>
+<a href="clients.html">Clients</a>
 <a href="contact.html">Contact</a>
 </div>
 </nav>
@@ -224,17 +274,17 @@ We provide end-to-end construction, infrastructure, MEP, and energy solutions ac
 </p>
 </div>
 
-<img src="images/construction.jpg" alt="Construction">
+<img src="images/about-home.webp" alt="Construction Company Oman">
 </section>
 
-<!-- EXTRA IMAGE SECTION -->
+<!-- EXTRA IMAGE -->
 <section class="split">
-<img src="images/project.jpg" alt="Projects">
+<img src="images/clients-home.webp" alt="Clients Oman">
 
 <div>
-<h2>Trusted by Clients Across Oman</h2>
+<h2>Trusted by Leading Clients</h2>
 <p>
-From residential villas to large-scale infrastructure, our team delivers excellence in every project.
+We have successfully delivered projects for government and private sector clients across Oman.
 </p>
 </div>
 </section>
@@ -282,6 +332,33 @@ From residential villas to large-scale infrastructure, our team delivers excelle
 
 </div>
 
+<!-- CLIENT LOGO SLIDER -->
+<div class="logo-slider">
+<div class="logo-track">
+
+<img src="images/oqbi-logo.webp">
+<img src="images/sohar-power-logo.webp">
+<img src="images/mazoon-electricity-logo.webp">
+<img src="images/pdo-logo.webp">
+<img src="images/galfar-logo.webp">
+<img src="images/majan-electricity-logo.webp">
+<img src="images/diam-haya-logo.webp">
+<img src="images/nama-logo.webp">
+<img src="images/khazaen-logo.webp">
+
+<img src="images/oqbi-logo.webp">
+<img src="images/sohar-power-logo.webp">
+<img src="images/mazoon-electricity-logo.webp">
+<img src="images/pdo-logo.webp">
+<img src="images/galfar-logo.webp">
+<img src="images/majan-electricity-logo.webp">
+<img src="images/diam-haya-logo.webp">
+<img src="images/nama-logo.webp">
+<img src="images/khazaen-logo.webp">
+
+</div>
+</div>
+
 <a href="contact.html" style="text-decoration:none;">
 <div class="cta">
 <h3>Looking for a Reliable Construction Company in Oman?</h3>
@@ -294,6 +371,9 @@ From residential villas to large-scale infrastructure, our team delivers excelle
 <footer>
 <p>© 2026 Al Wejha Group | Construction Company in Oman</p>
 </footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/96893884247?text=Hello%20Al%20Wejha%20Group,%20I%20am%20interested%20in%20your%20services" class="whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
