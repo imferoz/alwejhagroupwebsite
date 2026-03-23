@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Villa Construction in Oman | Luxury Villa Builders</title>
 
-<meta name="description" content="Luxury villa construction in Oman with modern design, premium finishing, and turnkey execution.">
+<meta name="description" content="Al Wejha Group offers luxury villa construction in Oman with modern designs, turnkey solutions, and premium residential building services in Muscat and across Oman.">
 
+<!-- FIXED FAVICON -->
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/images/logo.png">
 
@@ -16,92 +16,321 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f5f7fb;color:#1f2937}
 
-/* NAV */
-header{position:fixed;width:100%;background:#fff;z-index:1000}
-nav{display:flex;justify-content:space-between;align-items:center;padding:15px 8%}
-.logo{height:50px}
-.menu{display:flex;gap:20px}
+body{
+font-family:'Poppins',sans-serif;
+background:#f8fafc;
+color:#1e293b;
+}
+
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+nav a{
+color:#334155;
+margin:0 12px;
+text-decoration:none;
+font-size:14px;
+}
+nav a:hover{color:#d4af37}
+
+.logo{height:45px}
+
+/* DROPDOWN */
+.menu{display:flex;align-items:center}
+.dropdown{position:relative}
+.dropdown-content{
+display:none;
+position:absolute;
+background:#fff;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:8px;
+top:35px;
+min-width:220px;
+}
+.dropdown-content a{
+display:block;
+padding:10px;
+color:#334155;
+}
+.dropdown:hover .dropdown-content{
+display:block;
+}
 
 /* HERO */
-.hero{height:85vh;display:flex;align-items:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('/images/villa-about.webp') center/cover;color:#fff}
-.hero-content{margin-left:8%}
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
+url('images/villa-about.webp') center/cover;
+color:#fff;
+}
+.hero-content{
+max-width:700px;
+margin-left:8%;
+}
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+.hero p{color:#e2e8f0}
 
 /* SECTION */
 section{padding:80px 8%}
-h2{color:#d4af37;margin-bottom:20px}
+h2{
+color:#d4af37;
+margin-bottom:20px;
+}
 
 /* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
 
 /* CARD */
-.card{background:#fff;padding:25px;border-radius:12px}
+.card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* SPLIT */
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+.split img{
+width:100%;
+border-radius:12px;
+}
 
 /* CTA */
-.cta{background:#d4af37;color:#000;padding:50px;text-align:center;border-radius:15px}
+.cta{
+background:linear-gradient(45deg,#d4af37,#f5d27a);
+color:#000;
+padding:50px;
+text-align:center;
+border-radius:15px;
+margin-top:40px;
+}
 
 /* FOOTER */
-footer{background:#111;color:#ccc;text-align:center;padding:40px}
+footer{
+background:#0f172a;
+color:#cbd5f5;
+padding:50px 8%;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+footer a{
+color:#cbd5f5;
+text-decoration:none;
+display:block;
+margin:6px 0;
+}
+footer a:hover{color:#fff}
+
+.bottom-bar{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+color:#94a3b8;
+}
 
 /* WHATSAPP */
-.whatsapp{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;padding:14px;border-radius:50%}
-</style>
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:#fff;
+font-size:26px;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:999;
+}
 
+/* MOBILE */
+@media(max-width:768px){
+.split{grid-template-columns:1fr}
+.hero h1{font-size:36px}
+}
+</style>
 </head>
 
 <body>
 
 <header>
 <nav>
-<img src="/images/logo.png" class="logo">
+
+<a href="/">
+<img src="/images/logo.png" class="logo" alt="Al Wejha Group Logo">
+</a>
+
 <div class="menu">
 <a href="/">Home</a>
-<a href="/construction">Construction</a>
-<a href="/mep">MEP</a>
-<a href="/villa">Villa</a>
-<a href="/solar">Solar</a>
-<a href="/pipeline">Pipeline</a>
-<a href="/road">Road</a>
-<a href="/security">Security</a>
-<a href="/clients">Clients</a>
-<a href="/contact">Contact</a>
+
+<div class="dropdown">
+<a href="#">Services ▾</a>
+<div class="dropdown-content">
+<a href="construction-oman.html">Construction</a>
+<a href="mep-contractor-oman.html">MEP</a>
+<a href="villa-construction-oman.html">Villa</a>
+<a href="security-systems-oman.html">Security</a>
+<a href="solar-energy-oman.html">Solar</a>
+<a href="pipeline-oman.html">Pipeline</a>
+<a href="road-construction-oman.html">Road</a>
+</div>
+</div>
+
+<a href="clients.html">Clients</a>
+<a href="contact.html">Contact</a>
 </div>
 </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero">
 <div class="hero-content">
-<h1>Luxury Villa Construction</h1>
-<p>Premium villas designed and built to perfection.</p>
+<h1>Luxury Villa Construction in Oman</h1>
+<p>We build modern, elegant, and high-end villas tailored to your lifestyle across Oman.</p>
 </div>
 </div>
 
+<!-- ABOUT -->
+<section class="split">
+<div>
+<h2>Premium Villa Builders in Oman</h2>
+<p>
+Al Wejha Group is a trusted villa construction company in Oman delivering custom-designed luxury villas with modern architecture and premium finishing.
+</p>
+<p>
+We provide turnkey villa construction services ensuring quality, durability, and long-term value for residential projects across Muscat and Oman.
+</p>
+</div>
+
+<img src="images/villa-card.webp" alt="Villa Construction Oman">
+</section>
+
+<!-- SERVICES -->
 <section>
-<h2>Our Villa Services</h2>
+<h2>Our Villa Construction Services</h2>
+
 <div class="grid">
-<div class="card">Custom Design</div>
-<div class="card">Turnkey Construction</div>
-<div class="card">Luxury Finishing</div>
-<div class="card">Project Management</div>
+<div class="card">
+<h3>Custom Villa Design</h3>
+<p>Modern and unique architectural designs tailored to your needs.</p>
+</div>
+
+<div class="card">
+<h3>Turnkey Construction</h3>
+<p>Complete villa construction from concept to handover.</p>
+</div>
+
+<div class="card">
+<h3>Luxury Finishing</h3>
+<p>High-end interiors and premium finishing solutions.</p>
+</div>
+
+<div class="card">
+<h3>Project Management</h3>
+<p>Efficient planning and execution ensuring timely delivery.</p>
+</div>
 </div>
 </section>
 
+<!-- IMAGE SECTION -->
+<section class="split">
+<img src="images/villa-about.webp" alt="Luxury Villas Oman">
+
+<div>
+<h2>Modern Living with Excellence</h2>
+<p>
+Our villas are designed to combine functionality, elegance, and sustainability. We ensure the highest standards in construction and finishing.
+</p>
+<p>
+From foundation to final delivery, we maintain strict quality control and client satisfaction.
+</p>
+</div>
+</section>
+
+<!-- CTA -->
 <section>
-<a href="/contact">
 <div class="cta">
-<h3>Build Your Dream Villa</h3>
-<p>Start your project today.</p>
+<h2>Build Your Dream Villa in Oman</h2>
+<p>Contact Al Wejha Group today for premium villa construction services.</p>
+<a href="contact.html" style="display:inline-block;margin-top:20px;background:#000;color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none;">Contact Us</a>
 </div>
-</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Al Wejha Group</p>
+<div class="footer-grid">
+
+<div>
+<h3>Al Wejha Group</h3>
+<p>Leading construction company in Oman delivering quality and innovation.</p>
+</div>
+
+<div>
+<h4>Quick Links</h4>
+<a href="/">Home</a>
+<a href="clients.html">Clients</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<h4>Services</h4>
+<a href="construction-oman.html">Construction</a>
+<a href="mep-contractor-oman.html">MEP</a>
+<a href="villa-construction-oman.html">Villa</a>
+<a href="solar-energy-oman.html">Solar</a>
+</div>
+
+<div>
+<h4>More Services</h4>
+<a href="pipeline-oman.html">Pipeline</a>
+<a href="road-construction-oman.html">Road</a>
+<a href="security-systems-oman.html">Security</a>
+</div>
+
+</div>
+
+<div class="bottom-bar">
+© 2026 Al Wejha Group | All Rights Reserved
+</div>
 </footer>
 
-<a href="https://api.whatsapp.com/send?phone=96893884247&text=Hello%20Villa%20Construction"
-class="whatsapp" target="_blank">💬</a>
+<!-- WHATSAPP FIXED -->
+<a href="https://wa.me/96893884247?text=Hello%20Al%20Wejha%20Group,%20I%20am%20interested%20in%20villa%20construction%20services" 
+class="whatsapp" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
 </body>
 </html>
