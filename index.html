@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Top Construction Company in Oman | MEP, Solar & Infrastructure Experts</title>
 
-<meta name="description" content="Al Wejha Group is a leading construction company in Oman offering MEP, villa construction, solar, pipeline, and road works across Oman.">
+<meta name="description" content="Al Wejha Group is a leading construction company in Oman offering MEP, villa construction, solar energy, pipeline, and road construction services across Muscat and Oman.">
 
-<link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="images/logo.png">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/images/logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -20,6 +21,7 @@ body{
 font-family:'Poppins',sans-serif;
 background:#f5f7fb;
 color:#1a1a1a;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -27,8 +29,8 @@ header{
 position:fixed;
 width:100%;
 background:#fff;
-z-index:1000;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
 }
 
 nav{
@@ -50,8 +52,8 @@ gap:20px;
 }
 
 nav a{
-text-decoration:none;
 color:#333;
+text-decoration:none;
 font-size:14px;
 font-weight:500;
 }
@@ -60,7 +62,7 @@ nav a:hover{
 color:#0077ff;
 }
 
-/* DROPDOWN FIX */
+/* DROPDOWN */
 .dropdown{
 position:relative;
 }
@@ -74,7 +76,6 @@ background:#fff;
 min-width:220px;
 border-radius:8px;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
-z-index:999;
 }
 
 .dropdown-content a{
@@ -93,7 +94,7 @@ display:flex;
 align-items:center;
 background:
 linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
-url('images/hero-home.webp') center/cover;
+url('/images/hero-home.webp') center/cover;
 color:#fff;
 }
 
@@ -105,6 +106,11 @@ margin-left:8%;
 .hero h1{
 font-size:56px;
 margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:25px;
+color:#eee;
 }
 
 .btn{
@@ -122,6 +128,7 @@ h2{
 font-size:32px;
 margin-bottom:20px;
 color:#0077ff;
+cursor:pointer;
 }
 
 /* GRID */
@@ -141,7 +148,64 @@ text-decoration:none;
 color:#333;
 }
 
-/* WHATSAPP FIXED */
+/* SPLIT */
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.split img{
+width:100%;
+border-radius:12px;
+}
+
+/* CLIENT SLIDER */
+.logo-slider{
+overflow:hidden;
+background:#fff;
+padding:30px 0;
+margin-top:40px;
+}
+
+.logo-track{
+display:flex;
+width:200%;
+animation:scroll 25s linear infinite;
+}
+
+.logo-track img{
+width:150px;
+margin:0 40px;
+filter:grayscale(100%);
+opacity:0.7;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
+/* CTA */
+.cta{
+background:#0077ff;
+color:#fff;
+text-align:center;
+padding:50px;
+border-radius:15px;
+margin-top:40px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+background:#111;
+color:#aaa;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:25px;
@@ -158,8 +222,10 @@ z-index:999;
 /* MOBILE */
 @media(max-width:768px){
 .hero h1{font-size:34px}
+.split{grid-template-columns:1fr}
 }
 </style>
+
 </head>
 
 <body>
@@ -167,16 +233,14 @@ z-index:999;
 <header>
 <nav>
 
-<img src="images/logo.png" class="logo" alt="Al Wejha Group">
+<img src="/images/logo.png" class="logo" alt="Al Wejha Group Logo">
 
 <div class="menu">
 
 <a href="/">Home</a>
 
-<!-- ✅ SERVICES DROPDOWN FIXED -->
 <div class="dropdown">
 <a href="#">Services ▾</a>
-
 <div class="dropdown-content">
 <a href="/construction">Construction</a>
 <a href="/mep">MEP</a>
@@ -209,10 +273,34 @@ z-index:999;
 </div>
 </div>
 
+<!-- ABOUT -->
+<section class="split">
+
+<div onclick="location.href='/construction'">
+<h2>Complete Construction Solutions</h2>
+<p>End-to-end construction and infrastructure services across Oman.</p>
+</div>
+
+<img src="/images/about-home.webp" alt="Construction Oman">
+
+</section>
+
+<!-- CLIENTS -->
+<section class="split">
+
+<img src="/images/clients-home.webp" alt="Clients Oman">
+
+<div onclick="location.href='/clients'">
+<h2>Trusted by Leading Clients</h2>
+<p>Serving government and private sector clients across Oman.</p>
+</div>
+
+</section>
+
 <!-- SERVICES -->
 <section>
 
-<h2>Our Core Services</h2>
+<h2 onclick="location.href='/villa'">Our Core Services</h2>
 
 <div class="grid">
 
@@ -226,14 +314,44 @@ z-index:999;
 
 </div>
 
+<div class="logo-slider">
+<div class="logo-track">
+<img src="/images/oqbi-logo.webp">
+<img src="/images/sohar-power-logo.webp">
+<img src="/images/mazoon-electricity-logo.webp">
+<img src="/images/pdo-logo.webp">
+<img src="/images/galfar-logo.webp">
+<img src="/images/majan-electricity-logo.webp">
+<img src="/images/diam-haya-logo.webp">
+<img src="/images/nama-logo.webp">
+<img src="/images/khazaen-logo.webp">
+
+<img src="/images/oqbi-logo.webp">
+<img src="/images/sohar-power-logo.webp">
+<img src="/images/mazoon-electricity-logo.webp">
+<img src="/images/pdo-logo.webp">
+<img src="/images/galfar-logo.webp">
+<img src="/images/majan-electricity-logo.webp">
+<img src="/images/diam-haya-logo.webp">
+<img src="/images/nama-logo.webp">
+<img src="/images/khazaen-logo.webp">
+</div>
+</div>
+
+<a href="/contact">
+<div class="cta">
+<h3>Looking for a Reliable Construction Company in Oman?</h3>
+<p>Contact us today for complete engineering solutions.</p>
+</div>
+</a>
+
 </section>
 
-<footer style="text-align:center;padding:30px;background:#111;color:#aaa;">
-© 2026 Al Wejha Group
+<footer>
+<p>© 2026 Al Wejha Group</p>
 </footer>
 
-<!-- ✅ WHATSAPP FIXED -->
-<a href="https://api.whatsapp.com/send?phone=96893884247&text=Hello%20Al%20Wejha%20Group%2C%20I%20need%20your%20services"
+<a href="https://api.whatsapp.com/send?phone=96893884247&text=Hello%20Al%20Wejha%20Group%2C%20I%20am%20interested%20in%20your%20services"
 class="whatsapp"
 target="_blank">💬</a>
 
