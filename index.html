@@ -3,28 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ 
 <title>Top Construction Company in Oman | MEP, Solar & Infrastructure Experts</title>
-
+ 
 <meta name="description" content="Al Wejha Group is a leading construction company in Oman offering MEP, villa construction, solar energy, pipeline, and road construction services across Muscat and Oman.">
 <link rel="canonical" href="https://www.alwejhagroup.com/">
 <meta name="theme-color" content="#0077ff">
-
-<link rel="icon" href="/favicon.ico">
+ 
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/images/logo.png">
-
+ 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+ 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
+ 
 body{
 font-family:'Poppins',sans-serif;
 background:#f5f7fb;
 color:#1a1a1a;
 line-height:1.6;
 }
-
+ 
+a:focus, button:focus, input:focus, textarea:focus{
+outline:2px solid #0077ff;
+outline-offset:2px;
+}
+ 
+/* NAVBAR */
 header{
 position:fixed;
 width:100%;
@@ -32,44 +38,70 @@ background:#fff;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
-
+ 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 8%;
 }
-
-.logo{height:50px}
-
+ 
+.brand-link{
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+ 
+.logo{
+height:50px;
+width:auto;
+display:block;
+}
+ 
+/* MENU */
 .menu{
 display:flex;
-gap:20px;
 align-items:center;
+gap:20px;
 }
-
+ 
 nav a{
 color:#333;
 text-decoration:none;
 font-size:14px;
+font-weight:500;
 }
-
-nav a:hover{color:#0077ff}
-
+ 
+nav a:hover{
+color:#0077ff;
+}
+ 
 /* DROPDOWN */
-.dropdown{position:relative}
+.dropdown{
+position:relative;
+}
+ 
 .dropdown-content{
 display:none;
 position:absolute;
 top:30px;
+left:0;
 background:#fff;
 min-width:220px;
 border-radius:8px;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
+z-index:999;
 }
-.dropdown:hover .dropdown-content{display:block}
-.dropdown-content a{display:block;padding:10px}
-
+ 
+.dropdown-content a{
+display:block;
+padding:10px;
+}
+ 
+.dropdown:hover .dropdown-content{
+display:block;
+}
+ 
 /* HERO */
 .hero{
 height:100vh;
@@ -80,31 +112,63 @@ linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),
 url('/images/hero-home.webp') center/cover;
 color:#fff;
 }
-
+ 
 .hero-content{
-margin-left:8%;
 max-width:700px;
+margin-left:8%;
 }
-
-.hero h1{font-size:56px;margin-bottom:20px}
-
+ 
+.hero h1{
+font-size:56px;
+margin-bottom:20px;
+}
+ 
+.hero p{
+margin-bottom:25px;
+color:#f1f5f9;
+}
+ 
 .btn{
 background:#0077ff;
 padding:14px 30px;
 border-radius:30px;
 color:#fff;
 text-decoration:none;
+display:inline-block;
 }
-
+ 
+.btn:hover{
+background:#005ad1;
+}
+ 
 /* SECTION */
-section{padding:90px 8%}
-
+section{
+padding:90px 8%;
+}
+ 
+h2{
+font-size:32px;
+margin-bottom:20px;
+color:#0077ff;
+}
+ 
+.section-link{
+color:inherit;
+text-decoration:none;
+}
+ 
+.section-link:hover{
+text-decoration:underline;
+}
+ 
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
-
+ 
+/* CARD */
 .card{
 background:#fff;
 padding:25px;
@@ -112,43 +176,56 @@ border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
 text-decoration:none;
 color:#333;
+display:block;
 }
-
+ 
+.card:hover{
+transform:translateY(-8px);
+}
+ 
+/* SPLIT */
 .split{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
 align-items:center;
 }
-
+ 
 .split img{
 width:100%;
 border-radius:12px;
 }
-
-/* LOGO SLIDER */
+ 
+/* CLIENT SLIDER */
 .logo-slider{
+overflow:hidden;
 background:#fff;
 padding:30px 0;
 margin-top:40px;
-overflow:hidden;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
-
+ 
 .logo-track{
 display:flex;
+width:200%;
 animation:scroll 25s linear infinite;
+align-items:center;
 }
-
+ 
 .logo-track img{
 width:150px;
+height:auto;
 margin:0 40px;
+filter:grayscale(100%);
+opacity:0.8;
 }
-
+ 
 @keyframes scroll{
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
 }
-
+ 
 /* CTA */
 .cta{
 background:#0077ff;
@@ -158,15 +235,52 @@ padding:50px;
 border-radius:15px;
 margin-top:40px;
 }
-
-/* FOOTER */
+ 
+/* FOOTER – now matches the full footer used on every other page */
 footer{
 background:#111;
 color:#aaa;
-padding:40px 8%;
-text-align:center;
+padding:60px 8% 40px;
 }
-
+ 
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+max-width:1200px;
+margin:0 auto;
+}
+ 
+.footer-grid h4{
+color:#fff;
+margin-bottom:15px;
+font-size:18px;
+font-weight:600;
+}
+ 
+.footer-grid a{
+color:#aaa;
+text-decoration:none;
+display:block;
+margin-bottom:8px;
+}
+ 
+.footer-grid a:hover{
+color:#0077ff;
+}
+ 
+.footer-grid p{
+margin-bottom:10px;
+}
+ 
+.footer-bottom{
+text-align:center;
+margin-top:50px;
+padding-top:20px;
+border-top:1px solid #333;
+font-size:14px;
+}
+ 
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
@@ -174,140 +288,193 @@ bottom:25px;
 right:25px;
 background:#25D366;
 color:#fff;
-padding:14px;
+font-size:22px;
+padding:14px 16px;
 border-radius:50%;
 text-decoration:none;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
-
+ 
+/* MOBILE */
 @media(max-width:768px){
+nav{
+flex-wrap:wrap;
+gap:12px;
+}
+.menu{
+flex-wrap:wrap;
+gap:14px;
+}
 .hero h1{font-size:34px}
 .split{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
-
+ 
 <body>
-
+ 
 <header>
-<nav>
-
-<img src="/images/logo.png" class="logo" alt="Logo">
-
+<nav aria-label="Primary navigation">
+ 
+<a href="/" class="brand-link" aria-label="Go to homepage">
+<img src="/images/logo.png" class="logo" alt="Al Wejha Group Logo" width="180" height="50">
+</a>
+ 
 <div class="menu">
-
-<a href="/index.html">Home</a>
-
+ 
+<a href="/">Home</a>
+ 
 <div class="dropdown">
-<a href="#">Services ▾</a>
-<div class="dropdown-content">
-<a href="/construction/index.html">Construction</a>
-<a href="/mep/index.html">MEP</a>
-<a href="/villa/index.html">Villa</a>
-<a href="/solar/index.html">Solar</a>
-<a href="/pipeline/index.html">Pipeline</a>
-<a href="/road/index.html">Road</a>
-<a href="/security/index.html">Security</a>
+<a href="#" aria-haspopup="true" aria-expanded="false">Services ▾</a>
+<div class="dropdown-content" role="menu">
+<a href="/construction/">Construction</a>
+<a href="/mep/">MEP</a>
+<a href="/villa/">Villa</a>
+<a href="/solar/">Solar</a>
+<a href="/pipeline/">Pipeline</a>
+<a href="/road/">Road</a>
+<a href="/security/">Security</a>
 </div>
 </div>
-
-<a href="/clients/index.html">Clients</a>
-<a href="/contact/index.html">Contact</a>
-
+ 
+<a href="/clients/">Clients</a>
+<a href="/contact/">Contact</a>
+ 
 </div>
-
+ 
 </nav>
 </header>
-
+ 
 <!-- HERO -->
 <div class="hero">
 <div class="hero-content">
-
 <h1>Leading Construction Company in Oman</h1>
+ 
 <p>Complete civil, MEP & infrastructure solutions across Oman</p>
-
-<a href="/construction/index.html" class="btn">Explore Services</a>
-
+ 
+<a href="/construction/" class="btn">Explore Services</a>
 </div>
 </div>
-
+ 
 <!-- ABOUT -->
 <section class="split">
-
+ 
 <div>
-<h2>Complete Construction Solutions</h2>
+<h2><a class="section-link" href="/construction/">Complete Construction Solutions</a></h2>
 <p>End-to-end construction and infrastructure services across Oman.</p>
 </div>
-
-<img src="/images/about-home.webp" alt="Construction Oman">
-
+ 
+<img src="/images/about-home.webp" alt="Construction company in Oman" width="900" height="600" loading="lazy" decoding="async">
+ 
 </section>
-
+ 
 <!-- CLIENTS -->
 <section class="split">
-
-<img src="/images/clients-home.webp" alt="Clients Oman">
-
+ 
+<img src="/images/clients-home.webp" alt="Trusted clients in Oman" width="900" height="600" loading="lazy" decoding="async">
+ 
 <div>
-<h2>Trusted by Leading Clients</h2>
+<h2><a class="section-link" href="/clients/">Trusted by Leading Clients</a></h2>
 <p>Serving government and private sector clients across Oman.</p>
 </div>
-
+ 
 </section>
-
+ 
 <!-- SERVICES -->
 <section>
-
-<h2>Our Core Services</h2>
-
+ 
+<h2><a class="section-link" href="/villa/">Our Core Services</a></h2>
+ 
 <div class="grid">
-
-<a href="/construction/index.html" class="card">Construction Works</a>
-<a href="/mep/index.html" class="card">MEP Contracting</a>
-<a href="/villa/index.html" class="card">Villa Construction</a>
-<a href="/solar/index.html" class="card">Solar Energy</a>
-<a href="/pipeline/index.html" class="card">Pipeline Works</a>
-<a href="/road/index.html" class="card">Road Construction</a>
-<a href="/security/index.html" class="card">Security Systems</a>
-
+ 
+<a href="/construction/" class="card">Construction Works</a>
+<a href="/mep/" class="card">MEP Contracting</a>
+<a href="/villa/" class="card">Villa Construction</a>
+<a href="/solar/" class="card">Solar Energy</a>
+<a href="/pipeline/" class="card">Pipeline Works</a>
+<a href="/road/" class="card">Road Construction</a>
+<a href="/security/" class="card">Security Systems</a>
+ 
 </div>
-
-<div class="logo-slider">
+ 
+<div class="logo-slider" aria-label="Client logos">
+ 
 <div class="logo-track">
-
-<img src="/images/oqbi-logo.webp">
-<img src="/images/sohar-power-logo.webp">
-<img src="/images/mazoon-electricity-logo.webp">
-<img src="/images/pdo-logo.webp">
-<img src="/images/galfar-logo.webp">
-<img src="/images/majan-electricity-logo.webp">
-<img src="/images/diam-haya-logo.webp">
-<img src="/images/nama-logo.webp">
-<img src="/images/khazaen-logo.webp">
-
+<img src="/images/oqbi-logo.webp" alt="OQBI logo" loading="lazy" decoding="async">
+<img src="/images/sohar-power-logo.webp" alt="Sohar Power logo" loading="lazy" decoding="async">
+<img src="/images/mazoon-electricity-logo.webp" alt="Mazoon Electricity logo" loading="lazy" decoding="async">
+<img src="/images/pdo-logo.webp" alt="PDO logo" loading="lazy" decoding="async">
+<img src="/images/galfar-logo.webp" alt="Galfar logo" loading="lazy" decoding="async">
+<img src="/images/majan-electricity-logo.webp" alt="Majan Electricity logo" loading="lazy" decoding="async">
+<img src="/images/diam-haya-logo.webp" alt="Diam Haya logo" loading="lazy" decoding="async">
+<img src="/images/nama-logo.webp" alt="Nama logo" loading="lazy" decoding="async">
+<img src="/images/khazaen-logo.webp" alt="Khazaen logo" loading="lazy" decoding="async">
+ 
+<img src="/images/oqbi-logo.webp" alt="OQBI logo" loading="lazy" decoding="async">
+<img src="/images/sohar-power-logo.webp" alt="Sohar Power logo" loading="lazy" decoding="async">
+<img src="/images/mazoon-electricity-logo.webp" alt="Mazoon Electricity logo" loading="lazy" decoding="async">
+<img src="/images/pdo-logo.webp" alt="PDO logo" loading="lazy" decoding="async">
+<img src="/images/galfar-logo.webp" alt="Galfar logo" loading="lazy" decoding="async">
+<img src="/images/majan-electricity-logo.webp" alt="Majan Electricity logo" loading="lazy" decoding="async">
+<img src="/images/diam-haya-logo.webp" alt="Diam Haya logo" loading="lazy" decoding="async">
+<img src="/images/nama-logo.webp" alt="Nama logo" loading="lazy" decoding="async">
+<img src="/images/khazaen-logo.webp" alt="Khazaen logo" loading="lazy" decoding="async">
 </div>
+ 
 </div>
-
-<a href="/contact/index.html">
+ 
+<a href="/contact/" style="text-decoration:none;">
 <div class="cta">
 <h3>Looking for a Reliable Construction Company in Oman?</h3>
 <p>Contact us today for complete engineering solutions.</p>
 </div>
 </a>
-
+ 
 </section>
-
-<!-- ✅ FIXED FOOTER -->
+ 
 <footer>
-<p>© 2026 Al Wejha Group | All Rights Reserved</p>
-<p>
-<a href="/index.html">Home</a> |
-<a href="/services/index.html">Services</a> |
-<a href="/clients/index.html">Clients</a> |
-<a href="/contact/index.html">Contact</a>
-</p>
+<div class="footer-grid">
+ 
+<div>
+<h4>Al Wejha Group</h4>
+<p>Leading construction company in Oman delivering civil, MEP, solar and infrastructure solutions.</p>
+</div>
+ 
+<div>
+<h4>Our Services</h4>
+<a href="/construction/">Construction</a>
+<a href="/mep/">MEP</a>
+<a href="/villa/">Villa</a>
+<a href="/solar/">Solar</a>
+<a href="/pipeline/">Pipeline</a>
+<a href="/road/">Road</a>
+<a href="/security/">Security</a>
+</div>
+ 
+<div>
+<h4>Quick Links</h4>
+<a href="/">Home</a>
+<a href="/clients/">Clients</a>
+<a href="/contact/">Contact</a>
+</div>
+ 
+<div>
+<h4>Contact</h4>
+<p>Sohar, Oman</p>
+<p><a href="mailto:business@alwejhagroup.com" style="color:#aaa;">business@alwejhagroup.com</a></p>
+</div>
+ 
+</div>
+ 
+<div class="footer-bottom">
+<p>© 2026 Al Wejha Group</p>
+</div>
 </footer>
-
-<a href="https://wa.me/96893884247" class="whatsapp">💬</a>
-
+ 
+<a href="https://wa.me/96893884247?text=Hello%20Al%20Wejha%20Group%2C%20I%20am%20interested%20in%20your%20services"
+class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+ 
 </body>
 </html>
