@@ -6,10 +6,9 @@
 
 <title>MEP Contractor in Oman | HVAC, Electrical & Plumbing Services</title>
 
-<meta name="description" content="Al Wejha Group is a leading MEP contractor in Oman providing HVAC systems, electrical works, plumbing services, and electromechanical solutions for residential, commercial, and industrial projects.">
+<meta name="description" content="Al Wejha Group is a leading MEP contractor in Oman providing HVAC systems, electrical works, plumbing services, and electromechanical solutions.">
 
-<!-- FIXED FAVICON -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/images/logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,7 +27,7 @@ line-height:1.6;
 header{
 position:fixed;
 width:100%;
-background:#ffffff;
+background:#fff;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
@@ -43,16 +42,15 @@ color:#333;
 margin:0 12px;
 text-decoration:none;
 font-size:14px;
-font-weight:500;
 }
 nav a:hover{color:#0ea5e9}
 
 .logo{height:45px}
 
-/* DROPDOWN */
 .menu{display:flex;align-items:center}
-.dropdown{position:relative}
 
+/* DROPDOWN */
+.dropdown{position:relative}
 .dropdown-content{
 display:none;
 position:absolute;
@@ -63,14 +61,8 @@ top:30px;
 min-width:220px;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
-.dropdown-content a{
-display:block;
-padding:10px;
-color:#333;
-}
-.dropdown:hover .dropdown-content{
-display:block;
-}
+.dropdown:hover .dropdown-content{display:block}
+.dropdown-content a{display:block;padding:10px}
 
 /* HERO */
 .hero{
@@ -86,11 +78,7 @@ max-width:700px;
 margin-left:8%;
 color:#fff;
 }
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
-.hero p{color:#ddd}
+.hero h1{font-size:48px;margin-bottom:20px}
 
 /* SECTIONS */
 section{padding:80px 8%}
@@ -115,9 +103,7 @@ border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
 transition:.3s;
 }
-.card:hover{
-transform:translateY(-8px);
-}
+.card:hover{transform:translateY(-8px)}
 
 /* SPLIT */
 .split{
@@ -139,7 +125,6 @@ text-align:center;
 padding:50px;
 border-radius:15px;
 margin-top:40px;
-cursor:pointer;
 }
 
 /* FOOTER */
@@ -175,14 +160,8 @@ font-size:26px;
 padding:15px 18px;
 border-radius:50%;
 text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-z-index:999;
-}
-.whatsapp:hover{
-transform:scale(1.1);
 }
 
-/* MOBILE */
 @media(max-width:768px){
 .hero h1{font-size:34px}
 .split{grid-template-columns:1fr}
@@ -195,28 +174,31 @@ transform:scale(1.1);
 <!-- NAVBAR -->
 <header>
 <nav>
-<a href="/">
+
+<a href="/index.html">
 <img src="/images/logo.png" class="logo" alt="Al Wejha Group Logo">
 </a>
 
 <div class="menu">
-<a href="/">Home</a>
+
+<a href="/index.html">Home</a>
 
 <div class="dropdown">
 <a href="#">Services ▾</a>
 <div class="dropdown-content">
-<a href="/construction">Construction</a>
-<a href="/mep">MEP</a>
-<a href="/villa">Villa</a>
-<a href="/security">Security</a>
-<a href="/solar">Solar</a>
-<a href="/pipeline">Pipeline</a>
-<a href="/road">Road</a>
+<a href="/construction/index.html">Construction</a>
+<a href="/mep/index.html">MEP</a>
+<a href="/villa/index.html">Villa</a>
+<a href="/security/index.html">Security</a>
+<a href="/solar/index.html">Solar</a>
+<a href="/pipeline/index.html">Pipeline</a>
+<a href="/road/index.html">Road</a>
 </div>
 </div>
 
-<a href="/clients">Clients</a>
-<a href="/contact">Contact</a>
+<a href="/clients/index.html">Clients</a>
+<a href="/contact/index.html">Contact</a>
+
 </div>
 </nav>
 </header>
@@ -225,9 +207,7 @@ transform:scale(1.1);
 <div class="hero">
 <div class="hero-content">
 <h1>Leading MEP Contractor in Oman</h1>
-<p>
-We provide complete MEP solutions including HVAC systems, electrical installations, plumbing works, and electromechanical services across Oman.
-</p>
+<p>Complete HVAC, electrical, plumbing and electromechanical solutions across Oman.</p>
 </div>
 </div>
 
@@ -235,17 +215,10 @@ We provide complete MEP solutions including HVAC systems, electrical installatio
 <section class="split">
 <div>
 <h2>MEP Services in Oman</h2>
-
-<p>
-Al Wejha Group is a trusted MEP contractor in Oman delivering mechanical, electrical, and plumbing services for residential, commercial, and industrial projects.
-</p>
-
-<p>
-We specialize in HVAC systems, electrical installations, plumbing networks, and energy-efficient electromechanical solutions across Muscat and Oman.
-</p>
+<p>We deliver mechanical, electrical and plumbing services for residential, commercial and industrial projects.</p>
 </div>
 
-<img src="/images/mep-card.webp" alt="MEP Contractor Oman">
+<img src="/images/mep-card.webp" alt="MEP contractor in Oman" loading="lazy">
 </section>
 
 <!-- SERVICES -->
@@ -253,60 +226,21 @@ We specialize in HVAC systems, electrical installations, plumbing networks, and 
 <h2>Our MEP Services</h2>
 
 <div class="grid">
-
-<div class="card">
-<h3>HVAC Systems</h3>
-<p>Air conditioning, ventilation, and climate control systems.</p>
-</div>
-
-<div class="card">
-<h3>Electrical Works</h3>
-<p>Power distribution, wiring, lighting, and installations.</p>
-</div>
-
-<div class="card">
-<h3>Plumbing Services</h3>
-<p>Water supply, drainage, piping, and sanitation systems.</p>
-</div>
-
-<div class="card">
-<h3>Electromechanical Works</h3>
-<p>Integrated MEP solutions for complex infrastructure projects.</p>
-</div>
-
+<div class="card"><h3>HVAC Systems</h3></div>
+<div class="card"><h3>Electrical Works</h3></div>
+<div class="card"><h3>Plumbing Services</h3></div>
+<div class="card"><h3>Electromechanical Works</h3></div>
 </div>
 </section>
 
-<!-- WHY US -->
+<!-- CTA -->
 <section>
-<h2>Why Choose Our MEP Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Expert Engineers</h3>
-<p>Highly qualified MEP specialists and technicians.</p>
-</div>
-
-<div class="card">
-<h3>Energy Efficient Designs</h3>
-<p>Optimized systems for cost and energy savings.</p>
-</div>
-
-<div class="card">
-<h3>Reliable Delivery</h3>
-<p>Timely execution with strict quality standards.</p>
-</div>
-
-</div>
-
-<a href="/contact" style="text-decoration:none;">
+<a href="/contact/index.html" style="text-decoration:none;">
 <div class="cta">
 <h3>Need a Reliable MEP Contractor in Oman?</h3>
-<p>Contact Al Wejha Group for professional MEP solutions.</p>
+<p>Contact us for professional MEP solutions.</p>
 </div>
 </a>
-
 </section>
 
 <!-- FOOTER -->
@@ -315,36 +249,33 @@ We specialize in HVAC systems, electrical installations, plumbing networks, and 
 
 <div>
 <h4>Al Wejha Group</h4>
-<p>Leading construction and MEP company in Oman delivering engineering excellence.</p>
+<p>Leading construction and MEP company in Oman.</p>
 </div>
 
 <div>
-<h4>Our Services</h4>
-<a href="/construction">Construction</a>
-<a href="/mep">MEP</a>
-<a href="/villa">Villa</a>
-<a href="/solar">Solar</a>
+<h4>Services</h4>
+<a href="/construction/index.html">Construction</a>
+<a href="/mep/index.html">MEP</a>
+<a href="/villa/index.html">Villa</a>
+<a href="/solar/index.html">Solar</a>
 </div>
 
 <div>
-<h4>Quick Links</h4>
-<a href="/">Home</a>
-<a href="/clients">Clients</a>
-<a href="/contact">Contact</a>
+<h4>Links</h4>
+<a href="/index.html">Home</a>
+<a href="/clients/index.html">Clients</a>
+<a href="/contact/index.html">Contact</a>
 </div>
 
 <div>
 <h4>Contact</h4>
-<p>Muscat, Oman</p>
-<p>Email: business@alwejhagroup.com</p>
+<p>Oman</p>
 </div>
 
 </div>
 </footer>
 
-<!-- WHATSAPP FIX -->
-<a href="https://api.whatsapp.com/send?phone=96893884247&text=Hello%20Al%20Wejha%20Group,%20I%20need%20MEP%20services" 
-class="whatsapp" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/96893884247" class="whatsapp">💬</a>
 
 </body>
 </html>
