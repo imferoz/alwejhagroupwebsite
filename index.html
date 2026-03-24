@@ -196,7 +196,7 @@ width:100%;
 border-radius:12px;
 }
  
-/* CLIENT SLIDER */
+/* CLIENT SLIDER – fixed for better rendering even if images are slow */
 .logo-slider{
 overflow:hidden;
 background:#fff;
@@ -219,6 +219,7 @@ height:auto;
 margin:0 40px;
 filter:grayscale(100%);
 opacity:0.8;
+flex-shrink:0; /* prevents collapse when images are slow */
 }
  
 @keyframes scroll{
@@ -236,7 +237,7 @@ border-radius:15px;
 margin-top:40px;
 }
  
-/* FOOTER – now matches the full footer used on every other page */
+/* FOOTER – EXACTLY matches the Construction page footer (4-column grid + bottom bar) */
 footer{
 background:#111;
 color:#aaa;
