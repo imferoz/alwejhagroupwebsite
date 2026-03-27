@@ -8,8 +8,14 @@
 
 <meta name="description" content="Contact Al Wejha Group for construction, MEP, solar, and infrastructure services in Oman. Call or email us for project inquiries.">
 
-<link rel="icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="images/logo.png">
+<!-- ✅ CANONICAL -->
+<link rel="canonical" href="https://www.alwejhagroup.com/contact">
+
+<!-- ✅ BASE FIX (VERY IMPORTANT) -->
+<base href="/">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/images/logo.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -54,7 +60,7 @@ display:flex;
 align-items:center;
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.75)),
-url('images/contact-hero.webp') center/cover;
+url('/images/contact-hero.webp') center/cover;
 }
 .hero h1{
 color:#fff;
@@ -152,14 +158,20 @@ margin-top:40px;
 
 <header>
 <nav>
-<img src="images/logo.png" class="logo" alt="Al Wejha Group Logo">
+
+<!-- ✅ FIXED LOGO LINK -->
+<a href="/">
+<img src="/images/logo.png" class="logo" alt="Al Wejha Group Logo">
+</a>
 
 <div>
-<a href="index.html">Home</a>
-<a href="#">Services</a>
-<a href="#">Clients</a>
-<a href="contact.html">Contact</a>
+<!-- ✅ ALL LINKS FIXED -->
+<a href="/">Home</a>
+<a href="/construction">Construction</a>
+<a href="/clients">Clients</a>
+<a href="/contact">Contact</a>
 </div>
+
 </nav>
 </header>
 
@@ -192,7 +204,6 @@ www.alwejhagroup.com</p>
 <div class="card">
 <h2>Send a Message</h2>
 
-<!-- FORM READY (Formspree Integration) -->
 <form action="https://formspree.io/f/your-form-id" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
@@ -226,7 +237,6 @@ loading="lazy">
 <p>© 2026 Al Wejha Group | Construction Company in Oman</p>
 </footer>
 
-<!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/96893884247?text=Hello%20Al%20Wejha%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
 class="whatsapp" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
