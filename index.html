@@ -7,134 +7,600 @@
   <title>Top Construction Company in Oman | MEP, Solar & Infrastructure Experts</title>
   <meta name="description" content="Al Wejha Group is a leading construction company in Oman offering MEP, villa construction, solar energy, pipeline, and road construction services across Muscat and Oman.">
   <link rel="canonical" href="https://www.alwejhagroup.com/">
-
   <meta name="theme-color" content="#0077ff">
   <meta name="robots" content="index,follow,max-image-preview:large">
 
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/images/logo.png">
 
-  <!-- Fast LCP -->
-  <link rel="preload" as="image" href="/images/hero-home-poster.webp">
-
   <style>
-    /* KEEPING YOUR DESIGN EXACT */
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:system-ui;background:#f5f7fb;color:#1a1a1a}
-    .container{width:min(100% - 32px,1200px);margin:auto}
-
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:10}
-    .nav{display:flex;justify-content:space-between;align-items:center;min-height:70px}
-    .menu{display:flex;gap:20px}
-    .menu a{font-weight:600}
-
-    /* HERO FIXED */
-    .hero{
-      position:relative;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      color:#fff;
-      overflow:hidden;
-      background:url('/images/hero-home-poster.webp') center/cover no-repeat;
+    :root{
+      --bg:#f5f7fb;
+      --text:#1a1a1a;
+      --muted:#5d6470;
+      --brand:#0077ff;
+      --brand-dark:#005fd1;
+      --white:#ffffff;
+      --card:#ffffff;
+      --shadow:0 8px 26px rgba(0,0,0,.06);
+      --shadow-soft:0 4px 18px rgba(0,0,0,.05);
+      --radius:16px;
+      --max:1200px;
     }
 
-    .hero-video{
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    img,video{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{
+      width:min(calc(100% - 32px), var(--max));
+      margin:0 auto;
+    }
+
+    .skip-link{
       position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:16px;
+      top:16px;
+      width:auto;
+      height:auto;
+      z-index:9999;
+      background:#fff;
+      color:#000;
+      padding:12px 16px;
+      border-radius:10px;
+      box-shadow:var(--shadow);
+    }
+
+    /* Header */
+    header{
+      position:sticky;
       top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(180%) blur(14px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
+    }
+    .logo{
+      width:auto;
+      height:44px;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .menu a,
+    .menu button{
+      font:inherit;
+      color:#2f3744;
+      background:none;
+      border:0;
+      cursor:pointer;
+      padding:10px 0;
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:.01em;
+    }
+    .menu a:hover,
+    .menu button:hover{color:var(--brand)}
+    .menu a:focus-visible,
+    .menu button:focus-visible,
+    .dropdown-content a:focus-visible,
+    .btn:focus-visible,
+    .card:focus-visible,
+    .cta:focus-visible,
+    .whatsapp:focus-visible{
+      outline:2px solid var(--brand);
+      outline-offset:3px;
+      border-radius:10px;
+    }
+
+    .dropdown{position:relative}
+    .dropdown-content{
+      position:absolute;
+      top:42px;
       left:0;
+      min-width:240px;
+      padding:10px;
+      background:#fff;
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(0,0,0,.06);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(8px);
+      transition:.18s ease;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+    .dropdown-content a{
+      display:block;
+      padding:10px 12px;
+      border-radius:10px;
+      font-size:14px;
+      color:#2f3744;
+    }
+    .dropdown-content a:hover{background:#f2f7ff;color:var(--brand)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height:calc(100vh - 72px);
+      display:grid;
+      align-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg, rgba(8,14,26,.52), rgba(8,14,26,.62)),
+        url('/images/hero-home-poster.webp') center/cover no-repeat;
+      color:#fff;
+    }
+
+    .hero-media{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background:#000;
+    }
+    .hero-video{
       width:100%;
       height:100%;
       object-fit:cover;
-      z-index:0;
-      opacity:0;
-      transition:opacity .5s ease;
+      object-position:center;
+      display:block;
     }
 
-    .hero-video.loaded{
-      opacity:1;
-    }
-
-    .overlay{
+    .hero-overlay{
       position:absolute;
       inset:0;
-      background:rgba(0,0,0,.5);
       z-index:1;
+      background:linear-gradient(180deg, rgba(8,14,26,.36), rgba(8,14,26,.58));
     }
 
     .hero-content{
       position:relative;
       z-index:2;
-      padding:60px 0;
+      padding:88px 0;
+      max-width:760px;
+    }
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.16);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    .hero h1{
+      font-size:clamp(2.15rem, 5vw, 4rem);
+      line-height:1.08;
+      margin-bottom:18px;
+      max-width:12ch;
+      text-wrap:balance;
+    }
+    .hero p{
+      max-width:58ch;
+      font-size:clamp(1rem, 1.45vw, 1.15rem);
+      color:rgba(255,255,255,.92);
+      margin-bottom:30px;
     }
 
-    section{padding:80px 0}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 24px;
+      border-radius:999px;
+      background:var(--brand);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 10px 24px rgba(0,119,255,.22);
+      transition:transform .18s ease, background .18s ease;
+    }
+    .btn:hover{background:var(--brand-dark);transform:translateY(-1px)}
+
+    /* Sections */
+    section{
+      padding:88px 0;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:42px;
+      align-items:center;
+    }
+    .split h2,
+    .section-title{
+      font-size:clamp(1.65rem, 3vw, 2.35rem);
+      line-height:1.15;
+      margin-bottom:14px;
+    }
+    .split p,
+    .section-lead{
+      color:var(--muted);
+      font-size:1.02rem;
+      max-width:60ch;
+    }
+
+    .media-wrap{
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#e9edf5;
+      aspect-ratio:4 / 3;
+    }
+    .media-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .services-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+    .card{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:110px;
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(0,0,0,.04);
+      font-weight:700;
+      color:#2a3240;
+      text-align:center;
+      padding:18px;
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow);
+      border-color:rgba(0,119,255,.16);
+    }
+
+    .logo-slider{
+      margin-top:36px;
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(0,0,0,.04);
+      padding:18px 0;
+    }
+    .logo-track{
+      display:flex;
+      align-items:center;
+      gap:44px;
+      width:max-content;
+      animation:scroll 24s linear infinite;
+      will-change:transform;
+      padding:0 22px;
+    }
+    .logo-track img{
+      height:44px;
+      width:auto;
+      opacity:.92;
+      filter:grayscale(100%);
+    }
+    @keyframes scroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    .cta-wrap{
+      margin-top:40px;
+    }
+    .cta{
+      display:block;
+      background:linear-gradient(135deg, var(--brand), #1c8cff);
+      color:#fff;
+      border-radius:20px;
+      padding:34px 28px;
+      box-shadow:0 16px 34px rgba(0,119,255,.2);
+    }
+    .cta h3{
+      font-size:clamp(1.2rem, 2.2vw, 1.8rem);
+      margin-bottom:8px;
+    }
+    .cta p{
+      color:rgba(255,255,255,.94);
+      max-width:60ch;
+    }
+
+    footer{
+      background:#0f141c;
+      color:#a7afbb;
+      padding:36px 0;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    footer a{
+      color:#d7dce4;
+    }
+    footer a:hover{color:#fff}
+
+    .whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:56px;
+      height:56px;
+      display:grid;
+      place-items:center;
+      background:#25D366;
+      color:#fff;
+      border-radius:50%;
+      box-shadow:0 12px 24px rgba(37,211,102,.28);
+      z-index:1000;
+      font-size:1.35rem;
+    }
+
+    @media (max-width: 920px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:14px 0;
+      }
+      .menu{
+        justify-content:flex-start;
+        gap:18px;
+      }
+      .split{
+        grid-template-columns:1fr;
+      }
+      .hero{
+        min-height:82vh;
+      }
+      .hero-content{
+        padding:72px 0;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{width:min(calc(100% - 24px), var(--max))}
+      .menu{
+        gap:14px;
+      }
+      .menu a, .menu button{
+        font-size:13px;
+      }
+      .dropdown-content{
+        left:0;
+        right:auto;
+        min-width:210px;
+      }
+      .hero h1{
+        max-width:100%;
+      }
+      .logo-track{
+        gap:30px;
+      }
+      .logo-track img{
+        height:36px;
+      }
+      .whatsapp{
+        width:52px;
+        height:52px;
+        right:16px;
+        bottom:16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .logo-track{animation:none}
+      .hero-video{display:none}
+      .btn, .card{transition:none}
+    }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<header>
-  <div class="container nav">
-    <img src="/images/logo.png" height="40">
-    <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/index.html" aria-label="Al Wejha Group home">
+        <img src="/images/logo.png" class="logo" alt="Al Wejha Group logo" width="180" height="44" decoding="async">
+      </a>
 
-<main>
+      <nav class="menu" aria-label="Primary navigation">
+        <a href="/index.html">Home</a>
 
-<!-- HERO -->
-<section class="hero">
+        <div class="dropdown">
+          <button type="button" aria-haspopup="true" aria-expanded="false">Services ▾</button>
+          <div class="dropdown-content" role="menu" aria-label="Services submenu">
+            <a href="/construction/index.html" role="menuitem">Construction</a>
+            <a href="/mep/index.html" role="menuitem">MEP</a>
+            <a href="/villa/index.html" role="menuitem">Villa</a>
+            <a href="/solar/index.html" role="menuitem">Solar</a>
+            <a href="/pipeline/index.html" role="menuitem">Pipeline</a>
+            <a href="/road/index.html" role="menuitem">Road</a>
+            <a href="/security/index.html" role="menuitem">Security</a>
+          </div>
+        </div>
 
-  <!-- VIDEO FIX -->
-  <video id="heroVideo" class="hero-video" muted playsinline loop preload="none">
-    <source src="/videos/hero-home.webm" type="video/webm">
-    <source src="/videos/hero-home.mp4" type="video/mp4">
-  </video>
+        <a href="/clients/index.html">Clients</a>
+        <a href="/contact/index.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="overlay"></div>
+  <main id="main-content">
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-media" aria-hidden="true">
+        <video
+          class="hero-video"
+          poster="/images/hero-home-poster.webp"
+          autoplay
+          muted
+          playsinline
+          webkit-playsinline
+          loop
+          preload="metadata"
+          disablePictureInPicture
+          aria-hidden="true"
+        >
+          <source src="/videos/hero-home.webm" type="video/webm">
+          <source src="/videos/hero-home.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-  <div class="container hero-content">
-    <h1>Leading Construction Company in Oman</h1>
-    <p>Complete civil, MEP and infrastructure solutions across Oman.</p>
-  </div>
+      <div class="container hero-content">
+        <span class="eyebrow">Engineering • Construction • Energy</span>
+        <h1>Leading Construction Company in Oman</h1>
+        <p>Complete civil, MEP and infrastructure solutions across Oman, delivered with quality, reliability and long-term value.</p>
+        <a href="/construction/index.html" class="btn">Explore Services</a>
+      </div>
+    </section>
 
-</section>
+    <section>
+      <div class="container split">
+        <div>
+          <h2>Complete Construction Solutions</h2>
+          <p>End-to-end construction and infrastructure services across Oman, supported by experienced teams, practical delivery methods, and a strong commitment to deadlines.</p>
+        </div>
 
-<!-- CONTENT -->
-<section>
-  <div class="container">
-    <h2>Complete Construction Solutions</h2>
-    <p>Your full content remains intact...</p>
-  </div>
-</section>
+        <div class="media-wrap">
+          <img src="/images/about-home.webp" alt="Construction projects in Oman" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section>
+      <div class="container split">
+        <div class="media-wrap">
+          <img src="/images/clients-home.webp" alt="Trusted clients in Oman" loading="lazy" decoding="async">
+        </div>
 
-<script>
-  // SAFE VIDEO LOADER (fixes your issue)
-  document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("heroVideo");
+        <div>
+          <h2>Trusted by Leading Clients</h2>
+          <p>Serving government and private sector clients across Oman with dependable execution, responsive coordination, and consistent project support.</p>
+        </div>
+      </div>
+    </section>
 
-    if (!video) return;
+    <section>
+      <div class="container">
+        <div class="services-head">
+          <div>
+            <h2 class="section-title">Our Core Services</h2>
+            <p class="section-lead">A focused portfolio of construction and engineering services designed for Oman’s residential, commercial, and industrial needs.</p>
+          </div>
+        </div>
 
-    // Try to play video safely
-    const playVideo = () => {
-      video.play().then(() => {
-        video.classList.add("loaded");
-      }).catch(() => {
-        // fallback → keep poster only
-      });
-    };
+        <div class="grid">
+          <a href="/construction/index.html" class="card">Construction Works</a>
+          <a href="/mep/index.html" class="card">MEP Contracting</a>
+          <a href="/villa/index.html" class="card">Villa Construction</a>
+          <a href="/solar/index.html" class="card">Solar Energy</a>
+          <a href="/pipeline/index.html" class="card">Pipeline Works</a>
+          <a href="/road/index.html" class="card">Road Construction</a>
+          <a href="/security/index.html" class="card">Security Systems</a>
+        </div>
 
-    // Load video only after page ready
-    setTimeout(playVideo, 500);
-  });
-</script>
+        <div class="logo-slider" aria-label="Client logo marquee">
+          <div class="logo-track">
+            <img src="/images/oqbi-logo.webp" alt="OQBI logo" loading="lazy" decoding="async">
+            <img src="/images/sohar-power-logo.webp" alt="Sohar Power logo" loading="lazy" decoding="async">
+            <img src="/images/mazoon-electricity-logo.webp" alt="Mazoon Electricity logo" loading="lazy" decoding="async">
+            <img src="/images/pdo-logo.webp" alt="PDO logo" loading="lazy" decoding="async">
+            <img src="/images/galfar-logo.webp" alt="Galfar logo" loading="lazy" decoding="async">
+            <img src="/images/majan-electricity-logo.webp" alt="Majan Electricity logo" loading="lazy" decoding="async">
+            <img src="/images/diam-haya-logo.webp" alt="Diam Haya logo" loading="lazy" decoding="async">
+            <img src="/images/nama-logo.webp" alt="Nama logo" loading="lazy" decoding="async">
+            <img src="/images/khazaen-logo.webp" alt="Khazaen logo" loading="lazy" decoding="async">
 
+            <img src="/images/oqbi-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/sohar-power-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/mazoon-electricity-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/pdo-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/galfar-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/majan-electricity-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/diam-haya-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/nama-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/khazaen-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <div class="cta-wrap">
+          <a href="/contact/index.html" class="cta">
+            <h3>Looking for a Reliable Construction Company in Oman?</h3>
+            <p>Contact us today for complete engineering solutions.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Al Wejha Group | All Rights Reserved</p>
+      <p style="margin-top:10px;">
+        <a href="/index.html">Home</a> |
+        <a href="/services/index.html">Services</a> |
+        <a href="/clients/index.html">Clients</a> |
+        <a href="/contact/index.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/96893884247" class="whatsapp" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>
