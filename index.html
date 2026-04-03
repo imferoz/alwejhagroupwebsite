@@ -10,6 +10,13 @@
   <meta name="theme-color" content="#0077ff">
   <meta name="robots" content="index,follow,max-image-preview:large">
 
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Top Construction Company in Oman | MEP, Solar & Infrastructure Experts">
+  <meta property="og:description" content="Al Wejha Group is a leading construction company in Oman offering MEP, villa construction, solar energy, pipeline, and road construction services across Muscat and Oman.">
+  <meta property="og:url" content="https://www.alwejhagroup.com/">
+  <meta property="og:site_name" content="Al Wejha Group">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/images/logo.png">
 
@@ -167,7 +174,7 @@
       overflow:hidden;
       background:
         linear-gradient(180deg, rgba(8,14,26,.52), rgba(8,14,26,.62)),
-        url('/images/hero-home-poster.webp') center/cover no-repeat;
+        linear-gradient(135deg, #0f1725 0%, #121d2f 100%);
       color:#fff;
     }
 
@@ -176,14 +183,18 @@
       inset:0;
       z-index:0;
       pointer-events:none;
-      background:#000;
+      background:linear-gradient(135deg, #0f1725 0%, #121d2f 100%);
     }
     .hero-video{
       width:100%;
       height:100%;
       object-fit:cover;
       object-position:center;
-      display:block;
+      opacity:0;
+      transition:opacity .35s ease;
+    }
+    .hero-video.is-ready{
+      opacity:1;
     }
 
     .hero-overlay{
@@ -448,6 +459,16 @@
       .btn, .card{transition:none}
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Al Wejha Group",
+    "url": "https://www.alwejhagroup.com/",
+    "logo": "https://www.alwejhagroup.com/images/logo.png"
+  }
+  </script>
 </head>
 
 <body>
@@ -456,7 +477,15 @@
   <header>
     <div class="container nav">
       <a class="brand" href="/index.html" aria-label="Al Wejha Group home">
-        <img src="/images/logo.png" class="logo" alt="Al Wejha Group logo" width="180" height="44" decoding="async">
+        <img
+          src="/images/logo.png"
+          class="logo"
+          alt="Al Wejha Group logo"
+          width="1166"
+          height="1654"
+          fetchpriority="high"
+          decoding="async"
+        >
       </a>
 
       <nav class="menu" aria-label="Primary navigation">
@@ -486,19 +515,15 @@
       <div class="hero-media" aria-hidden="true">
         <video
           class="hero-video"
-          poster="/images/hero-home-poster.webp"
           autoplay
           muted
           playsinline
           webkit-playsinline
           loop
-          preload="metadata"
+          preload="none"
           disablePictureInPicture
           aria-hidden="true"
-        >
-          <source src="/videos/hero-home.webm" type="video/webm">
-          <source src="/videos/hero-home.mp4" type="video/mp4">
-        </video>
+        ></video>
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -518,7 +543,14 @@
         </div>
 
         <div class="media-wrap">
-          <img src="/images/about-home.webp" alt="Construction projects in Oman" loading="lazy" decoding="async">
+          <img
+            src="/images/about-home.webp"
+            alt="Construction projects in Oman"
+            width="1200"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
       </div>
     </section>
@@ -526,7 +558,14 @@
     <section>
       <div class="container split">
         <div class="media-wrap">
-          <img src="/images/clients-home.webp" alt="Trusted clients in Oman" loading="lazy" decoding="async">
+          <img
+            src="/images/clients-home.webp"
+            alt="Trusted clients in Oman"
+            width="1200"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
         <div>
@@ -557,25 +596,25 @@
 
         <div class="logo-slider" aria-label="Client logo marquee">
           <div class="logo-track">
-            <img src="/images/oqbi-logo.webp" alt="OQBI logo" loading="lazy" decoding="async">
-            <img src="/images/sohar-power-logo.webp" alt="Sohar Power logo" loading="lazy" decoding="async">
-            <img src="/images/mazoon-electricity-logo.webp" alt="Mazoon Electricity logo" loading="lazy" decoding="async">
-            <img src="/images/pdo-logo.webp" alt="PDO logo" loading="lazy" decoding="async">
-            <img src="/images/galfar-logo.webp" alt="Galfar logo" loading="lazy" decoding="async">
-            <img src="/images/majan-electricity-logo.webp" alt="Majan Electricity logo" loading="lazy" decoding="async">
-            <img src="/images/diam-haya-logo.webp" alt="Diam Haya logo" loading="lazy" decoding="async">
-            <img src="/images/nama-logo.webp" alt="Nama logo" loading="lazy" decoding="async">
-            <img src="/images/khazaen-logo.webp" alt="Khazaen logo" loading="lazy" decoding="async">
+            <img src="/images/oqbi-logo.webp" alt="OQBI logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/sohar-power-logo.webp" alt="Sohar Power logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/mazoon-electricity-logo.webp" alt="Mazoon Electricity logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/pdo-logo.webp" alt="PDO logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/galfar-logo.webp" alt="Galfar logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/majan-electricity-logo.webp" alt="Majan Electricity logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/diam-haya-logo.webp" alt="Diam Haya logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/nama-logo.webp" alt="Nama logo" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/khazaen-logo.webp" alt="Khazaen logo" width="150" height="44" loading="lazy" decoding="async">
 
-            <img src="/images/oqbi-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/sohar-power-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/mazoon-electricity-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/pdo-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/galfar-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/majan-electricity-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/diam-haya-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/nama-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
-            <img src="/images/khazaen-logo.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img src="/images/oqbi-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/sohar-power-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/mazoon-electricity-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/pdo-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/galfar-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/majan-electricity-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/diam-haya-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/nama-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
+            <img src="/images/khazaen-logo.webp" alt="" aria-hidden="true" width="150" height="44" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -602,5 +641,47 @@
   </footer>
 
   <a href="https://wa.me/96893884247" class="whatsapp" aria-label="Chat on WhatsApp">💬</a>
+
+  <script data-cfasync="false">
+    (function () {
+      const video = document.querySelector('.hero-video');
+      if (!video) return;
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) return;
+
+      const startVideo = () => {
+        const source = '/videos/hero-home.mp4';
+
+        if (!video.getAttribute('src')) {
+          video.src = source;
+        }
+
+        video.load();
+
+        const markReady = () => video.classList.add('is-ready');
+        video.addEventListener('loadeddata', markReady, { once: true });
+
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {
+            // Keep the design stable if autoplay is restricted.
+          });
+        }
+      };
+
+      const defer = () => {
+        const delay = window.matchMedia('(max-width: 767px)').matches ? 2200 : 900;
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(startVideo, { timeout: delay });
+        } else {
+          window.setTimeout(startVideo, delay);
+        }
+      };
+
+      window.addEventListener('load', defer, { once: true });
+    })();
+  </script>
 </body>
 </html>
